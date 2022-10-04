@@ -2,7 +2,7 @@
   "name": "charts-test",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://gemcave.github.io/chart-test",
+  "homepage": "https://gemcave.github.io/charts-test",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.5",
     "@testing-library/jest-dom": "^5.16.5",
