@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { getAllProducts } from "../../utils/common";
-import { ProductsState } from "./product.interface";
+import { ProductsState, IProduct, TCategories } from "./product.interface";
 
 const productsSlice = createSlice({
   name: "products",
@@ -14,7 +14,7 @@ const productsSlice = createSlice({
     getProductsPending: (state) => {
       state.loading = true;
     },
-    getProductsSuccess: (state, { payload }) => {
+    getProductsSuccess: (state, { payload }: { payload: IProduct[] }) => {
       state.allProducts = payload;
       state.loading = false;
       state.hasErrors = false;
@@ -23,7 +23,7 @@ const productsSlice = createSlice({
       state.loading = false;
       state.hasErrors = true;
     },
-    setFilter: (state, { payload }) => {
+    setFilter: (state, { payload }: { payload: TCategories }) => {
       state.filter = payload;
     },
   },
